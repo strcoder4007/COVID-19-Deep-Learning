@@ -1,8 +1,8 @@
 # Detecting covid-19 using Xray images
 
-##Collecting data
+## Collecting data
 
-###Positive Covid-19 X-rays
+### Positive Covid-19 X-rays
 
 [This](https://github.com/ieee8023/covid-chestxray-dataset) repository currently contains 68 covid-positive xrays as well as of MERS, SARS, and ARDS.
 
@@ -10,14 +10,14 @@
 python build_dataset.py -m <dataset folder path> -o <output path>
 ```
 
-###Negative Covid-19 X-rays
+### Negative Covid-19 X-rays
 
 [Kaggle chest xray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia).
 
 We select 68 random images from the above dataset to keep balance.
 
 
-##Training the model
+## Training the model
 
 I use VGGNet which is pre-trained on the imagenet dataset.
 
@@ -27,7 +27,7 @@ python trainModel.py -d <dataset path>
 
 ![plot](https://user-images.githubusercontent.com/41234408/77198206-88f8ae80-6b0c-11ea-8f46-7dd74b4c5a78.png)
 
-##Detection
+## Detection
 
 
 ```python
@@ -36,7 +36,7 @@ python detectCovid.py -i <input image path> -m <trained model path>
 
 This will give an output with image labeled as covid-positive or covid-negetive.
 
-##Output
+## Output
 
 For exmaple, for the image [covid1.jpeg], which is covid-positive.
 
